@@ -1,3 +1,4 @@
+"use strict";
 
 function validate() {
 	//Считаем значения из полей name и email в переменные x и y
@@ -22,15 +23,11 @@ function validate() {
 	//Проверяем содержит ли значение введенное в поле email символы @ и .
 	at = email.indexOf("@");
 	dot = email.indexOf(".");
-	//Если поле не содержит эти символы знач email введен не верно
 	if (at < 1 || dot < 1){
 		alert ("Поле 'Email' должно содержать символы '@' и '.'");
 		return false;
 	}
-	if (pass.length < 6){
-		alert ( "Пожалуйста, заполните поле 'Password', количество символов не менее 6.");
-		return false;
-	}
+	// Проверяем, чтобы длина пароля была не менее 6 символов
 	if (pass.length < 6){
 		alert ( "Пожалуйста, заполните поле 'Password', количество символов не менее 6.");
 		return false;
