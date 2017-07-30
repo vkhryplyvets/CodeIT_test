@@ -7,17 +7,29 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/validate.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 	<main id="main">
 		<div id="sign-up">
 			<p>Sign Up</p>
-			<form name='sign-up-form'>
+			<form name='sign_up_form' action="http://codeit.pro/frontTestTask/user/registration" method="post" onsubmit="return validate();">
 				<i class="fa fa-user" aria-hidden="true"></i>
-				<input type="name" id="user" placeholder="Username">
-				<i class="fa fa-lock" aria-hidden="true"></i>
-				<input type="password" id="pass" placeholder="Password">  
-				<input type="submit" value="Login">
+				<input type="text" name="name" placeholder="Username">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" name="secondname" placeholder="Secondname">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input type="text" name="email" placeholder="Email">
+				<select name="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+				<i class="fa fa-asterisk" aria-hidden="true"></i>
+				<input type="password" name="pass" placeholder="Password">
+				<input type="checkbox" id="conditionsagree" name="Agreement" value="Agree">
+    <label for="conditionsagree">Conditions of Agreement</label>
+				<input type="submit" name="send" value="Send">
 			</form>
 		</div>
 	</main>
